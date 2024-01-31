@@ -1,0 +1,65 @@
+<div class="container mt-4">
+
+
+    <h2 class="text-center"> Create author account </h2>
+
+    <div class="col-6 mx-auto">
+
+     
+        <form [formGroup]="registerForm">
+            <input [(ngModel)]="author.name" formControlName="name" type="text" class="form-control m-1" placeholder="name">
+            <div *ngIf="registerForm.get('name')?.hasError('required') && registerForm.get('name')?.touched"
+                class="error-message">
+            name is required
+            </div>
+            <div *ngIf="registerForm.get('name')?.hasError('minlength') && registerForm.get('name')?.touched"
+                class="error-message">
+            name must be at least 3 characters long
+            </div>
+
+            <input [(ngModel)]="author.lastname" formControlName="lastname" type="text" class="form-control m-1" placeholder="lastname">
+            <div *ngIf="registerForm.get('lastname')?.hasError('required') && registerForm.get('lastname')?.touched"
+                class="error-message">
+            lastname is required
+            </div>
+            <div *ngIf="registerForm.get('lastname')?.hasError('minlength') && registerForm.get('lastname')?.touched"
+                class="error-message">
+            lastname must be at least 3 characters long
+            </div>
+
+            <input [(ngModel)]="author.email" formControlName="email" type="text" class="form-control m-1" placeholder="Email">
+            <div *ngIf="registerForm.get('email')?.hasError('required') && registerForm.get('email')?.touched"
+                class="error-message">
+            Email is required
+            </div>
+            <div *ngIf="registerForm.get('email')?.hasError('email') && registerForm.get('email')?.touched"
+                class="error-message">
+            Please enter a valid email address
+            </div>
+
+            <input [(ngModel)]="author.password" formControlName="password" type="password" class="form-control m-1" placeholder="Password">
+            <div *ngIf="registerForm.get('password')?.hasError('required') && registerForm.get('password')?.touched"
+                class="error-message">
+            Password is required
+            </div>
+            <div *ngIf="registerForm.get('password')?.hasError('minlength') && registerForm.get('password')?.touched"
+                class="error-message">
+            Password must be at least 4 characters long
+            </div>
+            <input  type="file" (change)="select($event)" class="form-control m-1" placeholder="image">
+            <textarea  [(ngModel)]="author.about" name="" id="" cols="30" rows="4" placeholder="about" class="form-control m-1" ></textarea>
+        </form>
+
+        <div *ngIf="registerForm.invalid" class="error-message">
+            Please fill out the form correctly before registering.
+          </div>
+
+        <button  (click)="register()" class="btn btn-dark form-control m-1">Register</button>
+
+        <div *ngIf="registrationError && registerForm.get('password')?.touched" class="error-message">
+            Registration failed. Please check your information and try again.
+          </div>
+
+    </div>
+
+</div>

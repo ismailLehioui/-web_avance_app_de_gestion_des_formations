@@ -1,0 +1,40 @@
+.navbar {
+  height: 50px; /* ou toute autre hauteur souhaitée */
+}
+.navbar-nav .nav-link {
+  line-height: 30px; /* ou ajustez selon vos besoins */
+}
+.dropdown {
+  height: 30px; /* ou ajustez selon vos besoins */
+}
+
+
+
+/* 
+
+ul {
+list-style: none;
+text-align: center;
+}
+ ul li {
+display: inline-block;
+position: relative;
+}
+ul li a {
+display: block;
+padding: 20px 25px;
+text-decoration: none;
+text-align: center;
+font-size: 16px;
+}
+ul li ul.dropdown li {
+display: block;
+margin: 2px 0px;
+}
+ul li ul.dropdown {
+width:auto;
+position: absolute;
+z-index: 999;
+display: none;
+}
+  */

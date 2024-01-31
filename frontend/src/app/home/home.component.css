@@ -1,0 +1,139 @@
+h6{
+    font-size:5em;
+    padding-left: 120px;
+    color: rgb(143, 7, 7);
+    position: relative;
+    -webkit-text-stroke: 0.3vw rgb(12, 11, 11);
+    text-transform: uppercase;
+}
+h6::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    color: rgb(31, 10, 116);
+    -webkit-text-stroke: 0vw rgb(105, 44, 44);
+    border-right: 2px solid rgb(68, 5, 162);
+    overflow: hidden;
+    animation: animate 60s linear infinate;
+ }
+ @keyframes animate
+ {
+    0% ,10% ,100%
+    {
+        width: 0;
+    }
+    70% ,90%{
+         width: 100%;
+    }
+ }
+ 
+ 
+ 
+ 
+ span{
+     color:rgb(106, 4, 4)
+ }
+
+ .rourou1{
+    background-color: rgb(224, 99, 54);
+    animation: square-to-circle 2s infinite alternate;
+    padding-left: 15em;
+    
+  
+  }
+  @keyframes square-to-circle {
+      0%  {
+        border-radius:0 0 0 0;
+        background:rgb(159, 15, 19);
+     
+      }
+      25%  {
+        border-radius:10% 10% 10% 10%;
+        background:rgb(192, 29, 29);
+        
+      }
+      50%  {
+        border-radius:25% 25% 25% 25%;
+        background:rgb(214, 67, 67);
+        
+      }
+      75%  { 
+        border-radius:40% 40% 40% 40%;
+        background:lightcoral;
+      }
+      100% {  
+        border-radius:50%;
+        background:rgb(224, 76, 76);
+      }
+    }
+    
+    h5{
+        padding-left: 6.3em;
+        
+    }
+    .raw3a{
+        padding-left: 7.8em ;
+        width: 40em;
+        height: 52%;
+    }
+
+    .btn btn-primary{
+      padding-left: 20em;
+    }
+
+
+    .rourou{
+      background-color: rgb(196, 199, 206);
+      height: 25em;
+      
+    }
+
+    .ismail{
+      padding-top: 3em;
+    }
+
+
+    .aa{
+      width: 16em;
+      padding-left: 8em;
+      padding-top: 0.2;
+      
+  
+     }
+
+
+     .bb{
+      width: 15em;
+      padding-left: 8em;
+      padding-top: 3.2em;
+  
+     }
+     
+   .cc{
+    width: 16em;
+    padding-left: 8em;
+    
+    padding-top: 3.2em;
+
+   }
+   .dd{
+    width: 15em;
+    padding-left: 8em;
+    
+    padding-top: 2em;
+
+   }
+   .roi{
+    width: 18em;
+    padding-left: 5em;
+    padding-top: 1.6em;
+
+   }
+   .roua123{
+    padding-left: 8em;
+    width: 50%;
+
+   }
